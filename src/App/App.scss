@@ -1,6 +1,13 @@
+@import '../Button/Button.scss';
+@import '../CardContainer/CardContainer.scss';
+
 .App {
   text-align: center;
   background-color: pink;
+}
+
+.icon {
+  fill: pink;
 }
 
 .App-logo {

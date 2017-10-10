@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './imp-logo.svg';
+import Button from '../Button/Button';
+import CardContainer from '../CardContainer/CardContainer';
+import logo from '../assets/imp-logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -8,12 +10,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">SWAPIbox</h1>
         </header>
-        <p className="App-intro">
-          suh dude
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Button />
+        <Button />
+        <Button />
+        <CardContainer />
       </div>
     );
   }
