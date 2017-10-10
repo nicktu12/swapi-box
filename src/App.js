@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '../Button/Button';
+import CardContainer from '../CardContainer/CardContainer';
 import logo from './imp-logo.svg';
 import './App.css';
 
@@ -10,10 +12,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          suh dude
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Button />
+        <CardContainer />
       </div>
     );
   }
