@@ -2,12 +2,12 @@ import React from 'react';
 
 const Button = () => {
   return (
-    <div>
+    <div className="button-container">
       <button>
-        Heyyy
+        Button
       </button>
     </div>
-  )
-}
+  );
+};
 
 export default Button;
