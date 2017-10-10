@@ -14,13 +14,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "^16.0.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.10.3"
   }
 }
