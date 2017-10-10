@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
 import CardContainer from '../CardContainer/CardContainer';
-import logo from './imp-logo.svg';
+import logo from '../assets/imp-logo.svg';
 import './App.css';
 
 class App extends Component {
