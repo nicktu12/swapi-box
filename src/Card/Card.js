@@ -1,16 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Card = () => {
+const Card = ({ title, line1, line2, line3, line4 }) => {
   return (
-    <div>
+    <div className='card notfavorite'
+      onClick={(event) => {console.log('classes', event.target.closest('.card').classList); }}>
       <article>
-        <h3>Name</h3>
-        <p>Card property</p>
-        <p>Card property</p>
-        <p>Card property</p>
+        {/* <div>put an image or something in here</div> */}
+        <h3>{title}</h3>
+        <p>{line1}</p>
+        <p>{line2}</p>
+        <p>{line3}</p>
+        <p>{line4}</p>
       </article>
     </div>
   );
+};
+
+Card.propTypes = {
+  title: PropTypes.string,
+  line1: PropTypes.string,
+  line2: PropTypes.string,
+  line3: PropTypes.string,
+  line4: PropTypes.string
 };
 
 export default Card;

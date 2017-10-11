@@ -1,13 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = () => {
+const Button = ({ title, changeCategory }) => {
   return (
-    <div className="button-container">
+    <div className="button-container"
+      onClick={() => { changeCategory(title); }}>
       <button>
-        Button
+        {title}
       </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  title: PropTypes.string,
+  changeCategory: PropTypes.func
 };
 
 export default Button;
