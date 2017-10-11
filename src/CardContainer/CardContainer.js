@@ -8,7 +8,8 @@ class CardContainer extends Component {
   constructor() {
     super();
     this.state = {
-      category: ''
+      category: '',
+      faves: [],
     };
     this.faves = [];
   }
@@ -18,8 +19,11 @@ class CardContainer extends Component {
   }
 
   favoriteACard = (object) => {
-    let found = this.faves.findIndex(currentfave => currentfave.title === object.title);
-    found > -1 ? this.faves.splice(found, 1) : this.faves.push(object);
+    const { faves } = this.state;
+    const found = faves.findIndex(currentfave => currentfave.title === object.title);
+    found > -1 ? faves.splice(found, 1) : faves.push(object);
+    this.setState({ faves });
+    console.log(this.state.faves);
   }
 
   renderPeople(people) {
@@ -30,7 +34,10 @@ class CardContainer extends Component {
         line2={`Homeworld Population: ${person.population}`}
         line3={`Species: ${person.species}`}
         line4={''}
-        favoriteFunc={this.favoriteACard}/>);
+        favoriteFunc={this.favoriteACard}
+        className={
+          this.state.faves.find(fave => fave.title === person.name) ? 'favorite' : 'unfavorite'
+        }/>);
   }
 
   renderPlanets(planets) {
@@ -47,7 +54,10 @@ class CardContainer extends Component {
             line3={`Climate: ${planet.climate}`}
             line4={residentText.length ? `Residents: ${residentText}`
               : 'Residents: none'}
-            favoriteFunc={this.favoriteACard}/>
+            favoriteFunc={this.favoriteACard}
+            className={
+              this.faves.find(fave => fave.title === planet.name) ? 'favorite' : 'unfavorite'
+            }/>
         );
       })
     );
@@ -63,7 +73,10 @@ class CardContainer extends Component {
             line2={`Class: ${vehicle.vehicle_class}`}
             line3={`Maximum Number of Passengers: ${vehicle.passengers}`}
             line4={''}
-            favoriteFunc={this.favoriteACard}/>
+            favoriteFunc={this.favoriteACard}
+            className={
+              this.faves.find(fave => fave.title === vehicle.name) ? 'favorite' : 'unfavorite'
+            }/>
         );
       })
     );

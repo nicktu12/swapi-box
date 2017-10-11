@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, line1, line2, line3, line4, favoriteFunc }) => {
+const Card = ({ title, line1, line2, line3, line4, favoriteFunc, className }) => {
   return (
-    <div className='card notfavorite'
-      onClick={() => { favoriteFunc({title, line1, line2, line3, line4}); }}>
+    <div className={`card ${className}`}
+      onClick={() => { favoriteFunc({ title, line1, line2, line3, line4 }); }}>
       <article>
         {/* <div>put an image or something in here</div> */}
         <h3>{title}</h3>
