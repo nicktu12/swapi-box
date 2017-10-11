@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ title, changeCategory }) => {
+const Button = ({ title, changeCategory, stateCategory }) => {
   return (
-    <div className="button-container"
-      onClick={() => { changeCategory(title); }}>
+    <div className={
+      title===stateCategory
+        ? "button-container button-active"
+        : "button-container"
+    }
+    onClick={() => { changeCategory(title); }}>
       <button>
         {title}
       </button>
@@ -14,7 +18,8 @@ const Button = ({ title, changeCategory }) => {
 
 Button.propTypes = {
   title: PropTypes.string,
-  changeCategory: PropTypes.func
+  changeCategory: PropTypes.func,
+  stateCategory: PropTypes.string
 };
 
 export default Button;

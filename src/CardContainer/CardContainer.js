@@ -85,6 +85,7 @@ class CardContainer extends Component {
         key={Math.random()}
         title={title}
         changeCategory={this.changeCategory}
+        stateCategory={this.state.category}
       />
     ));
   }
