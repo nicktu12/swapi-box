@@ -21,7 +21,7 @@ class CardContainer extends Component {
         title={person.name}
         line1={`Homeworld: ${person.homeworld}`}
         line2={`Homeworld Population: ${person.population}`}
-        line3={`Species`}
+        line3={`Species: ${person.species}`}
         line4={''}/>);
   }
 

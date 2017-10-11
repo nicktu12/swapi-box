@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       dataSet: []
     };
+    this.peopleHolder = [];
   }
 
   componentDidMount() {
@@ -23,12 +24,12 @@ class App extends Component {
       .then(res => res.json());
 
     return Promise.all([people, planets, vehicles, scroll]).then( res => {
-      const peopleOrigin = this.fetchHomeworld(res[0].results);
-      const planetResidents = this.fetchPlanetResidents(res[1].results);
+      const peopleInfo = this.squashPeopleArrays(res[0].results);
+      const planetInfo = this.fetchPlanetResidents(res[1].results);
 
       return Promise.all([
-        peopleOrigin,
-        planetResidents,
+        peopleInfo,
+        planetInfo,
         vehicles,
         scroll]).then(res => {
         this.setState({ dataSet:
@@ -40,17 +41,47 @@ class App extends Component {
     });
   }
 
+  squashPeopleArrays(peopleData) {
+    this.fetchHomeworld(peopleData);
+    this.fetchSpecies(peopleData);
+
+    return Promise.all([...this.peopleHolder[0], ...this.peopleHolder[1]]).then(res => {
+      const homeWorldInfo = res.slice(0, 10);
+      const speciesInfo = res.slice(10);
+      return homeWorldInfo.map(personObj => {
+        const match = speciesInfo.find(specie => {
+          return specie.name === personObj.name;
+        });
+        return Object.assign(personObj, { species: match.species });
+      });
+    });
+  }
+
   fetchHomeworld(peopleData) {
-    const peopleArray = [];
-    peopleData.map((personObj) => {
+    const peopleArray = peopleData.map((personObj) => {
       return fetch(personObj.homeworld)
         .then(res => res.json())
-        .then(res => peopleArray.push(
-          Object.assign(personObj, { homeworld: res.name,
-            population: res.population }))
+        .then(res =>
+          Object.assign({}, { name: personObj.name,
+            homeworld: res.name,
+            population: res.population })
         );
     });
-    return peopleArray;
+    this.peopleHolder.push(peopleArray);
+  }
+
+  fetchSpecies(peopleData) {
+    const speciesArray = peopleData.map(person => {
+      return fetch(person.species)
+        .then(res => res.json())
+        .then(res =>
+          Object.assign({}, { name: person.name,
+            species: res.name}
+          )
+        );
+    });
+
+    this.peopleHolder.push(speciesArray);
   }
 
   fetchPlanetResidents(planetData) {
