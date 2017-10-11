@@ -15,6 +15,29 @@ class CardContainer extends Component {
     this.setState({ category });
   }
 
+  renderCards = () => {
+    if (this.state.category) {
+      const dataForCards = this.props.dataForCards;
+      console.log(dataForCards[0])
+      switch (this.state.category) {
+        case 'People':
+        return (
+          dataForCards[0].map(person =>
+            <Card key={Math.random()}
+              title={person.name}
+              line1={`Homeworld: ${person.homeworld}`}
+              line2={`Homeworld Population: ${person.population}`}
+              line3={`Species`}/>)
+            );
+            default:
+            return (
+              <div></div>
+            );
+          }
+
+    }
+  }
+
   render() {
     const mappedButtons = this.props.buttonTitles.map((title)=>(
       <Button
@@ -32,7 +55,7 @@ class CardContainer extends Component {
     return (
       <div className="card-container">
         {mappedButtons}
-        {mappedCards}
+        {this.renderCards()}
       </div>
     );
   }
