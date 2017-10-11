@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ title }) => {
+const Button = ({ title, changeCategory }) => {
   return (
-    <div className="button-container">
+    <div className="button-container"
+      onClick={() => { changeCategory(title); }}>
       <button>
         {title}
       </button>
@@ -12,7 +13,8 @@ const Button = ({ title }) => {
 };
 
 Button.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  changeCategory: PropTypes.func
 };
 
 export default Button;

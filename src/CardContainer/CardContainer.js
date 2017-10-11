@@ -7,8 +7,12 @@ class CardContainer extends Component {
   constructor() {
     super();
     this.state = {
-
+      category: ''
     };
+  }
+
+  changeCategory = (category) => {
+    this.setState({ category });
   }
 
   render() {
@@ -16,6 +20,7 @@ class CardContainer extends Component {
       <Button
         key={Math.random()}
         title={title}
+        changeCategory={this.changeCategory}
       />
     ));
     const mappedCards = this.props.dataForCards.map((dataSet)=>(
@@ -23,7 +28,7 @@ class CardContainer extends Component {
         dataSet={dataSet}
         key={Math.random()}
       />));
-    
+
     return (
       <div className="card-container">
         {mappedButtons}
