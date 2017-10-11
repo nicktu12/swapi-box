@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ title, line1, line2, line3, line4 }) => {
+const Card = ({ title, line1, line2, line3, line4, favoriteFunc }) => {
   return (
     <div className='card notfavorite'
-      onClick={(event) => {console.log('classes', event.target.closest('.card').classList); }}>
+      onClick={() => { favoriteFunc({title, line1, line2, line3, line4}); }}>
       <article>
         {/* <div>put an image or something in here</div> */}
         <h3>{title}</h3>
@@ -22,7 +22,8 @@ Card.propTypes = {
   line1: PropTypes.string,
   line2: PropTypes.string,
   line3: PropTypes.string,
-  line4: PropTypes.string
+  line4: PropTypes.string,
+  favoriteFunc: PropTypes.func
 };
 
 export default Card;
