@@ -23,7 +23,6 @@ class CardContainer extends Component {
     const found = faves.findIndex(currentfave => currentfave.title === object.title);
     found > -1 ? faves.splice(found, 1) : faves.push(object);
     this.setState({ faves });
-    console.log(this.state.faves);
   }
 
   renderPeople(people) {
@@ -82,8 +81,27 @@ class CardContainer extends Component {
     );
   }
 
+  renderFavorites(array) {
+    console.log('faves')
+    return (
+      array.map(card =>
+        <Card key={Math.random()}
+          title={card.title}
+          line1={card.line1}
+          line2={card.line2}
+          line3={card.line3}
+          line4={card.line4}
+          favoriteFunc={this.favoriteACard}
+          className={
+            this.state.faves.find(fave => fave.title === card.title) ? 'favorite' : 'unfavorite'
+          }/>
+      )
+    );
+  }
+
   renderCards = () => {
     if (this.state.category) {
+      console.log('cat', this.state.category)
       const dataForCards = this.props.dataForCards;
       switch (this.state.category) {
       case 'People':
@@ -92,6 +110,8 @@ class CardContainer extends Component {
         return this.renderPlanets(dataForCards[1]);
       case 'Vehicles':
         return this.renderVehicles(dataForCards[2]);
+      case 'Favorites':
+        return this.renderFavorites(this.state.faves);
       default:
         return (
           <div></div>
@@ -106,6 +126,7 @@ class CardContainer extends Component {
       <Button
         key={Math.random()}
         title={(title !== 'Favorites') ? title : `Favorites ${this.state.faves.length}`}
+        category={title}
         changeCategory={this.changeCategory}
         stateCategory={this.state.category}
       />
