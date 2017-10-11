@@ -37,6 +37,7 @@ class App extends Component {
             res[1],
             res[2].results,
             res[3].results]});
+            console.log(JSON.stringify(this.state.dataSet));
       });
     });
   }
