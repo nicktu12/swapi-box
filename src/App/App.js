@@ -83,6 +83,7 @@ class App extends Component {
         .then(res =>
           Object.assign({}, { name: person.name,
             species: res.name}
+            
           )
         )
         .catch(error => alert(error));

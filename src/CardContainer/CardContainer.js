@@ -10,6 +10,9 @@ class CardContainer extends Component {
     this.state = {
       category: ''
     };
+    this.peopleFaves = [];
+    this.planetFaves = [];
+    this.vehicleFaves = [];
   }
 
   changeCategory = (category) => {
