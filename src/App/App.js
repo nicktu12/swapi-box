@@ -15,13 +15,17 @@ class App extends Component {
 
   componentDidMount() {
     const people = fetch('https://swapi.co/api/people/')
-      .then(res => res.json());
+      .then(res => res.json())
+      .catch(error => alert(error));
     const planets = fetch('https://swapi.co/api/planets/')
-      .then(res => res.json());
+      .then(res => res.json())
+      .catch(error => alert(error));
     const vehicles = fetch('https://swapi.co/api/vehicles/')
-      .then(res => res.json());
+      .then(res => res.json())
+      .catch(error => alert(error));
     const scroll = fetch('https://swapi.co/api/films/')
-      .then(res => res.json());
+      .then(res => res.json())
+      .catch(error => alert(error));
 
     return Promise.all([people, planets, vehicles, scroll]).then( res => {
       const peopleInfo = this.squashPeopleArrays(res[0].results);
@@ -45,16 +49,17 @@ class App extends Component {
     this.fetchHomeworld(peopleData);
     this.fetchSpecies(peopleData);
 
-    return Promise.all([...this.peopleHolder[0], ...this.peopleHolder[1]]).then(res => {
-      const homeWorldInfo = res.slice(0, 10);
-      const speciesInfo = res.slice(10);
-      return homeWorldInfo.map(personObj => {
-        const match = speciesInfo.find(specie => {
-          return specie.name === personObj.name;
+    return Promise.all([...this.peopleHolder[0], ...this.peopleHolder[1]])
+      .then(res => {
+        const homeWorldInfo = res.slice(0, 10);
+        const speciesInfo = res.slice(10);
+        return homeWorldInfo.map(personObj => {
+          const match = speciesInfo.find(specie => {
+            return specie.name === personObj.name;
+          });
+          return Object.assign(personObj, { species: match.species });
         });
-        return Object.assign(personObj, { species: match.species });
       });
-    });
   }
 
   fetchHomeworld(peopleData) {
@@ -65,7 +70,8 @@ class App extends Component {
           Object.assign({}, { name: personObj.name,
             homeworld: res.name,
             population: res.population })
-        );
+        )
+        .catch(error => alert(error));
     });
     this.peopleHolder.push(peopleArray);
   }
@@ -78,7 +84,8 @@ class App extends Component {
           Object.assign({}, { name: person.name,
             species: res.name}
           )
-        );
+        )
+        .catch(error => alert(error));
     });
 
     this.peopleHolder.push(speciesArray);
