@@ -14,7 +14,7 @@ const Scroll = ( {scrollData} ) => {
 };
 
 Scroll.propTypes = {
-  scrollData: PropTypes.string
+  scrollData: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Scroll;
