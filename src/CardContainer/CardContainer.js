@@ -9,7 +9,7 @@ class CardContainer extends Component {
     super();
     this.state = {
       category: '',
-      faves: [],
+      faves: []
     };
     this.faves = [];
   }
@@ -56,7 +56,7 @@ class CardContainer extends Component {
               : 'Residents: none'}
             favoriteFunc={this.favoriteACard}
             className={
-              this.faves.find(fave => fave.title === planet.name) ? 'favorite' : 'unfavorite'
+              this.state.faves.find(fave => fave.title === planet.name) ? 'favorite' : 'unfavorite'
             }/>
         );
       })
@@ -75,7 +75,7 @@ class CardContainer extends Component {
             line4={''}
             favoriteFunc={this.favoriteACard}
             className={
-              this.faves.find(fave => fave.title === vehicle.name) ? 'favorite' : 'unfavorite'
+              this.state.faves.find(fave => fave.title === vehicle.name) ? 'favorite' : 'unfavorite'
             }/>
         );
       })
@@ -105,7 +105,7 @@ class CardContainer extends Component {
     return this.props.buttonTitles.map((title)=>(
       <Button
         key={Math.random()}
-        title={title}
+        title={(title !== 'Favorites') ? title : `Favorites ${this.state.faves.length}`}
         changeCategory={this.changeCategory}
         stateCategory={this.state.category}
       />

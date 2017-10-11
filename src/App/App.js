@@ -129,7 +129,7 @@ class App extends Component {
               <Loader /> :
               <CardContainer
                 dataForCards={this.dataForCards(this.state.dataSet)}
-                buttonTitles={['People', 'Planets', 'Vehicles']}
+                buttonTitles={['Favorites', 'People', 'Planets', 'Vehicles']}
                 scrollData={this.state.dataSet[3]}
               />
           }
