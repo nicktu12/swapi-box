@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Button from '../Button/Button';
+import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      dataSet: null
+      dataSet: []
     };
   }
 
@@ -21,23 +21,18 @@ class App extends Component {
     return Promise.all([people, planets, vehicles, scroll]).then( res => {
       const peopleOrigin = this.fetchHomeworld(res[0].results);
       const planetResidents = this.fetchPlanetResidents(res[1].results);
-      // console.log(peopleOrigin);
-      // console.log(res[1].results)
+
       return Promise.all([peopleOrigin, planetResidents, vehicles, scroll]).then(res => {
-        this.setState({ dataSet: [res[0], res[1], res[2].results, res[3].results ] });
-        console.log(this.state.dataSet)
+        this.setState({ dataSet: [res[0], res[1], res[2].results, res[3].results]});
       });
-
-    }
-    );
-
+    });
   }
 
   fetchHomeworld(peopleData) {
     const peopleArray = [];
     const peopleHomeworldData = peopleData.map((personObj) => {
       return fetch(personObj.homeworld).then(res => res.json()).then(res => peopleArray.push(Object.assign(personObj, { homeworld: res.name, population: res.population })));
-    })
+    });
     return peopleArray;
 }
 
@@ -54,6 +49,15 @@ class App extends Component {
     return planetArray;
   }
 
+  dataForCards(dataSet) {
+    if (dataSet) {
+      return [dataSet[0], dataSet[1], dataSet[2]];
+    } else {
+      return null;
+    }
+  }
+
+
   render() {
 
     return (
@@ -62,10 +66,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">SWAPIbox</h1>
         </header>
-        <Button />
-        <Button />
-        <Button />
-        <CardContainer />
+        <main>
+          {
+            this.state.dataSet.length === 0 ?
+            <Loader /> :
+            <CardContainer dataForCards={this.dataForCards(this.state.dataSet)}/>
+          }
+        </main>
       </div>
     );
   }
