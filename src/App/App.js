@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
-<<<<<<< HEAD
-// import './App.css';
-=======
 import { Route } from 'react-router';
 import './App.css';
->>>>>>> Install router node package and import into index, app
 
 class App extends Component {
   constructor() {
@@ -138,15 +134,6 @@ class App extends Component {
                 scrollData={this.state.dataSet[3]}
               />
           }
-          <Route exact path='/Planets'
-            render={()=>[<p>Planeys yo</p>]}
-          />
-          <Route exact path='/People'
-            render={()=>[<p>Peeps yo</p>]}
-          />
-          <Route exact path='/Vehicles'
-            render={()=>[<p>vroom vroom</p>]}
-          />
         </main>
       </div>
     );
