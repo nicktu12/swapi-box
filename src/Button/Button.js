@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ title, changeCategory, stateCategory }) => {
+const Button = ({ title, changeCategory, stateCategory, category }) => {
   return (
     <div className={
-      title===stateCategory
+      category===stateCategory
         ? "button-container button-active"
         : "button-container"
     }
-    onClick={() => { changeCategory(title); }}>
+    onClick={() => { changeCategory(category); }}>
       <button>
         {title}
       </button>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
-import './App.css';
+// import './App.css';
 
 class App extends Component {
   constructor() {
@@ -83,6 +83,7 @@ class App extends Component {
         .then(res =>
           Object.assign({}, { name: person.name,
             species: res.name}
+
           )
         )
         .catch(error => alert(error));
@@ -128,7 +129,7 @@ class App extends Component {
               <Loader /> :
               <CardContainer
                 dataForCards={this.dataForCards(this.state.dataSet)}
-                buttonTitles={['People', 'Planets', 'Vehicles']}
+                buttonTitles={['Favorites', 'People', 'Planets', 'Vehicles']}
                 scrollData={this.state.dataSet[3]}
               />
           }

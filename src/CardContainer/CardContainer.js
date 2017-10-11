@@ -8,12 +8,21 @@ class CardContainer extends Component {
   constructor() {
     super();
     this.state = {
-      category: ''
+      category: '',
+      faves: []
     };
+    this.faves = [];
   }
 
   changeCategory = (category) => {
     this.setState({ category });
+  }
+
+  favoriteACard = (object) => {
+    const { faves } = this.state;
+    const found = faves.findIndex(currentfave => currentfave.title === object.title);
+    found > -1 ? faves.splice(found, 1) : faves.push(object);
+    this.setState({ faves });
   }
 
   renderPeople(people) {
@@ -23,7 +32,11 @@ class CardContainer extends Component {
         line1={`Homeworld: ${person.homeworld}`}
         line2={`Homeworld Population: ${person.population}`}
         line3={`Species: ${person.species}`}
-        line4={''}/>);
+        line4={''}
+        favoriteFunc={this.favoriteACard}
+        className={
+          this.state.faves.find(fave => fave.title === person.name) ? 'favorite' : 'unfavorite'
+        }/>);
   }
 
   renderPlanets(planets) {
@@ -39,7 +52,11 @@ class CardContainer extends Component {
             line2={`Population: ${planet.population}`}
             line3={`Climate: ${planet.climate}`}
             line4={residentText.length ? `Residents: ${residentText}`
-              : 'Residents: none'}/>
+              : 'Residents: none'}
+            favoriteFunc={this.favoriteACard}
+            className={
+              this.state.faves.find(fave => fave.title === planet.name) ? 'favorite' : 'unfavorite'
+            }/>
         );
       })
     );
@@ -54,14 +71,37 @@ class CardContainer extends Component {
             line1={`Model: ${vehicle.model}`}
             line2={`Class: ${vehicle.vehicle_class}`}
             line3={`Maximum Number of Passengers: ${vehicle.passengers}`}
-            line4={''}/>
+            line4={''}
+            favoriteFunc={this.favoriteACard}
+            className={
+              this.state.faves.find(fave => fave.title === vehicle.name) ? 'favorite' : 'unfavorite'
+            }/>
         );
       })
     );
   }
 
+  renderFavorites(array) {
+    console.log('faves')
+    return (
+      array.map(card =>
+        <Card key={Math.random()}
+          title={card.title}
+          line1={card.line1}
+          line2={card.line2}
+          line3={card.line3}
+          line4={card.line4}
+          favoriteFunc={this.favoriteACard}
+          className={
+            this.state.faves.find(fave => fave.title === card.title) ? 'favorite' : 'unfavorite'
+          }/>
+      )
+    );
+  }
+
   renderCards = () => {
     if (this.state.category) {
+      console.log('cat', this.state.category)
       const dataForCards = this.props.dataForCards;
       switch (this.state.category) {
       case 'People':
@@ -70,6 +110,8 @@ class CardContainer extends Component {
         return this.renderPlanets(dataForCards[1]);
       case 'Vehicles':
         return this.renderVehicles(dataForCards[2]);
+      case 'Favorites':
+        return this.renderFavorites(this.state.faves);
       default:
         return (
           <div></div>
@@ -83,7 +125,8 @@ class CardContainer extends Component {
     return this.props.buttonTitles.map((title)=>(
       <Button
         key={Math.random()}
-        title={title}
+        title={(title !== 'Favorites') ? title : `Favorites ${this.state.faves.length}`}
+        category={title}
         changeCategory={this.changeCategory}
         stateCategory={this.state.category}
       />
