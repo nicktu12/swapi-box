@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 const Card = ({ title, line1, line2, line3, line4 }) => {
   return (
-    <div>
+    <div className='card notfavorite'
+      onClick={(event) => {console.log('classes', event.target.closest('.card').classList); }}>
       <article>
+        {/* <div>put an image or something in here</div> */}
         <h3>{title}</h3>
         <p>{line1}</p>
         <p>{line2}</p>
