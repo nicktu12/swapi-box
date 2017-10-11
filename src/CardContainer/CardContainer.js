@@ -18,9 +18,9 @@ class CardContainer extends Component {
   renderCards = () => {
     if (this.state.category) {
       const dataForCards = this.props.dataForCards;
-      console.log(dataForCards[0])
+      console.log(dataForCards[1])
       switch (this.state.category) {
-        case 'People':
+      case 'People':
         return (
           dataForCards[0].map(person =>
             <Card key={Math.random()}
@@ -28,12 +28,29 @@ class CardContainer extends Component {
               line1={`Homeworld: ${person.homeworld}`}
               line2={`Homeworld Population: ${person.population}`}
               line3={`Species`}/>)
-            );
-            default:
+        );
+      case 'Planets':
+        return (
+          dataForCards[1].map(planet => {
+            const residentText = planet.residentArray.map(resident => {
+              return resident.name;
+            }).join(', ');
             return (
-              <div></div>
+              <Card key={Math.random()}
+                title={planet.name}
+                line1={`Terrain: ${planet.terrain}`}
+                line2={`Population: ${planet.population}`}
+                line3={`Climate: ${planet.climate}`}
+                line4={residentText.length ? `Residents: ${residentText}` 
+                  : 'Residents: none'}/>
             );
-          }
+          })
+        );
+      default:
+        return (
+          <div></div>
+        );
+      }
 
     }
   }
@@ -46,11 +63,6 @@ class CardContainer extends Component {
         changeCategory={this.changeCategory}
       />
     ));
-    const mappedCards = this.props.dataForCards.map((dataSet)=>(
-      <Card
-        dataSet={dataSet}
-        key={Math.random()}
-      />));
 
     return (
       <div className="card-container">

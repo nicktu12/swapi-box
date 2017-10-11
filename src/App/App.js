@@ -61,9 +61,9 @@ class App extends Component {
       });
 
       return Promise.all(planetResidents)
-        .then(res => planetArray.push(Object.assign(planetObj, res)));
+        .then(res => planetArray.push(
+          Object.assign(planetObj, {residentArray: res} )));
     });
-
     return planetArray;
   }
 
