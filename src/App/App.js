@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
@@ -54,9 +53,10 @@ class App extends Component {
     if (dataSet) {
       return [dataSet[0], dataSet[1], dataSet[2]];
     } else {
-      return null
+      return null;
     }
   }
+
 
   render() {
 
@@ -73,10 +73,6 @@ class App extends Component {
             <CardContainer dataForCards={this.dataForCards(this.state.dataSet)}/>
           }
         </main>
-        <Button />
-        <Button />
-        <Button />
-
       </div>
     );
   }
