@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -119,10 +119,11 @@ class App extends Component {
           {
             this.state.dataSet.length === 0 ?
               <Loader /> :
-              <CardContainer dataForCards={
-                this.dataForCards(this.state.dataSet)
-              }
-              buttonTitles={['People', 'Planets', 'Vehicles']}/>
+              <CardContainer
+                dataForCards={this.dataForCards(this.state.dataSet)}
+                buttonTitles={['People', 'Planets', 'Vehicles']}
+                scrollData={this.state.dataSet[3]}
+              />
           }
         </main>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
+import Scroll from '../Scroll/Scroll';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 
@@ -91,6 +92,7 @@ class CardContainer extends Component {
   render() {
     return (
       <div className="card-container">
+        <Scroll scrollData={this.props.scrollData}/>
         {this.renderButtons()}
         {this.renderCards()}
       </div>
@@ -100,7 +102,8 @@ class CardContainer extends Component {
 
 CardContainer.propTypes = {
   dataForCards: PropTypes.arrayOf(PropTypes.array),
-  buttonTitles: PropTypes.arrayOf(PropTypes.string)
+  buttonTitles: PropTypes.arrayOf(PropTypes.string),
+  scrollData: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default CardContainer;
