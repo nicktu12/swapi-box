@@ -21,7 +21,8 @@ class CardContainer extends Component {
         title={person.name}
         line1={`Homeworld: ${person.homeworld}`}
         line2={`Homeworld Population: ${person.population}`}
-        line3={`Species`}/>);
+        line3={`Species`}
+        line4={''}/>);
   }
 
   renderPlanets(planets) {
@@ -43,6 +44,21 @@ class CardContainer extends Component {
     );
   }
 
+  renderVehicles(vehicles) {
+    return (
+      vehicles.map(vehicle => {
+        return (
+          <Card key={Math.random()}
+            title={vehicle.name}
+            line1={`Model: ${vehicle.model}`}
+            line2={`Class: ${vehicle.vehicle_class}`}
+            line3={`Maximum Number of Passengers: ${vehicle.passengers}`}
+            line4={''}/>
+        );
+      })
+    );
+  }
+
   renderCards = () => {
     if (this.state.category) {
       const dataForCards = this.props.dataForCards;
@@ -51,6 +67,8 @@ class CardContainer extends Component {
         return this.renderPeople(dataForCards[0]);
       case 'Planets':
         return this.renderPlanets(dataForCards[1]);
+      case 'Vehicles':
+        return this.renderVehicles(dataForCards[2]);
       default:
         return (
           <div></div>
