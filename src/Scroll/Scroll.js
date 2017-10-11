@@ -6,7 +6,7 @@ const Scroll = ( {scrollData} ) => {
     <div className="scroll-text">
       <div className="scroll-cont">
         <p className="scroll-p">
-          {scrollData[6].opening_crawl}          
+          {scrollData[6].opening_crawl}
         </p>
       </div>
     </div>
