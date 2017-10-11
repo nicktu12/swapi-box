@@ -60,18 +60,20 @@ class CardContainer extends Component {
     }
   }
 
-  render() {
-    const mappedButtons = this.props.buttonTitles.map((title)=>(
+  renderButtons() {
+    return this.props.buttonTitles.map((title)=>(
       <Button
         key={Math.random()}
         title={title}
         changeCategory={this.changeCategory}
       />
     ));
+  }
 
+  render() {
     return (
       <div className="card-container">
-        {mappedButtons}
+        {this.renderButtons()}
         {this.renderCards()}
       </div>
     );
