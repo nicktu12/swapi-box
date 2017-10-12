@@ -66,6 +66,13 @@ describe('Card', () => {
     expect(third).toBeDefined();
   });
 
+  it('should fire function when clicked', () => {
+    const div = wrapper.find('div');
+
+    div.simulate('click');
+    expect(mockFn).toHaveBeenCalled();
+  });
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
