@@ -10,7 +10,7 @@ const Button = ({ title, changeCategory, stateCategory, category }) => {
         : "button-container"
     }
     onClick={() => { changeCategory(category); }}>
-      <Link to={title}>{title}</Link>
+      <Link to={category}>{title}</Link>
     </div>
   );
 };

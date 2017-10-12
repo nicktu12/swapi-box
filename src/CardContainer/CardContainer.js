@@ -137,6 +137,7 @@ class CardContainer extends Component {
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
         {this.renderButtons()}
+        {/* {this.renderCards()} */}
         <Route exact path='/People'
           render={ () => this.renderPeople(this.props.dataForCards[0])}
         />
@@ -146,7 +147,7 @@ class CardContainer extends Component {
         <Route exact path='/Vehicles'
           render={ () => this.renderVehicles(this.props.dataForCards[2])}
         />
-        <Route path='/Favorites'
+        <Route exact path='/Favorites'
           render={ () => this.renderFavorites(this.state.faves)}
         />
       </div>
