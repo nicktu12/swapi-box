@@ -30,8 +30,7 @@ $duration: 60s;
   width: 100%;
   overflow: hidden;
   height: 4rem;
-  background-color: rgba(#000, 0.9);
-  padding-left: 100%;  // offset items to begin
+  padding-left: 100%;
 
 }
 
@@ -42,8 +41,8 @@ $duration: 60s;
   color: rgba(254, 218, 74, 1);
   height: 4rem;
   line-height: 4rem;
-  white-space: nowrap; // display items in a line
-  padding-right: 100%; // ensure items go before animations repeat (taken from parent due to inline-block)
+  white-space: nowrap;
+  padding-right: 100%;
 
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
@@ -53,15 +52,5 @@ $duration: 60s;
          animation-name: ticker;
   -webkit-animation-duration: $duration;
           animation-duration: $duration;
-
-  &__item {
-
-    display: inline-block;
-
-    padding: 0 2rem;
-    font-size: 2rem;
-    color: white;
-
-  }
 
 }
