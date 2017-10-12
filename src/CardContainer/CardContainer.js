@@ -4,6 +4,7 @@ import Scroll from '../Scroll/Scroll';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router';
+import { Switch } from 'react-router-dom';
 
 
 class CardContainer extends Component {
@@ -115,8 +116,7 @@ class CardContainer extends Component {
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
         {this.renderButtons()}
-        {/* {this.renderCards()} */}
-        <Route exact path='/People'
+        <Switch><Route exact path='/People'
           render={ () => this.renderPeople(this.props.dataForCards[0])}
         />
         <Route exact path='/Planets'
@@ -127,7 +127,7 @@ class CardContainer extends Component {
         />
         <Route exact path='/Favorites'
           render={ () => this.renderFavorites(this.state.faves)}
-        />
+        /></Switch>
       </div>
     );
   }
