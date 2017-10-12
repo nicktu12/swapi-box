@@ -14,7 +14,6 @@ class CardContainer extends Component {
       category: '',
       faves: []
     };
-    this.faves = [];
   }
 
   changeCategory = (category) => {
@@ -38,7 +37,7 @@ class CardContainer extends Component {
         line4={''}
         favoriteFunc={this.favoriteACard}
         className={
-          this.state.faves.find(fave => fave.title === person.name) ? 'favorite' : 'unfavorite'
+          this.state.faves.find(fave => fave.title === person.name) ? 'people favorite' : 'people unfavorite'
         }/>);
   }
 

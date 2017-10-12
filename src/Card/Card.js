@@ -5,11 +5,14 @@ import notFaveIcon from '../assets/not-favorite.png';
 
 const Card = ({ title, line1, line2, line3, line4, favoriteFunc, className }) => {
   const icon = (className === 'favorite') ? faveIcon : notFaveIcon;
+  const altText = (className === 'favorite') ?
+    'Icon indicates this card is a favorite' :
+    'Icon indicates this card is not a favorite';
   return (
     <div className={`card ${className}`}
       onClick={() => { favoriteFunc({ title, line1, line2, line3, line4 }); }}>
       <article>
-        <img src={icon} alt='Text indicating if fave' />
+        <img src={icon} alt={altText} />
         <h3>{title}</h3>
         <p>{line1}</p>
         <p>{line2}</p>
