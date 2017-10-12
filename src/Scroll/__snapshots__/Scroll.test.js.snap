@@ -1,0 +1,430 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scroll should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Scroll
+    scrollData={
+        Array [
+            Object {
+              "director": "George Lucas",
+              "episode_id": 4,
+              "opening_crawl": "It is a period of civil war.
+        Rebel spaceships, striking
+        from a hidden base, have won
+        their first victory against
+        the evil Galactic Empire.
+        
+        During the battle, Rebel
+        spies managed to steal secret
+        plans to the Empire's
+        ultimate weapon, the DEATH
+        STAR, an armored space
+        station with enough power
+        to destroy an entire planet.
+        
+        Pursued by the Empire's
+        sinister agents, Princess
+        Leia races home aboard her
+        starship, custodian of the
+        stolen plans that can save her
+        people and restore
+        freedom to the galaxy....",
+              "producer": "Gary Kurtz, Rick McCallum",
+              "release_date": "1977-05-25",
+              "title": "A New Hope",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="ticker-wrap"
+>
+        <p
+                className="ticker"
+        >
+                It is a period of civil war.
+                Rebel spaceships, striking
+                from a hidden base, have won
+                their first victory against
+                the evil Galactic Empire.
+                
+                During the battle, Rebel
+                spies managed to steal secret
+                plans to the Empire's
+                ultimate weapon, the DEATH
+                STAR, an armored space
+                station with enough power
+                to destroy an entire planet.
+                
+                Pursued by the Empire's
+                sinister agents, Princess
+                Leia races home aboard her
+                starship, custodian of the
+                stolen plans that can save her
+                people and restore
+                freedom to the galaxy....
+                <br />
+                <br />
+                A New Hope
+                <br />
+                <br />
+                1977-05-25
+        </p>
+</div>,
+      "className": "scroll-text",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <p
+          className="ticker"
+>
+          It is a period of civil war.
+          Rebel spaceships, striking
+          from a hidden base, have won
+          their first victory against
+          the evil Galactic Empire.
+          
+          During the battle, Rebel
+          spies managed to steal secret
+          plans to the Empire's
+          ultimate weapon, the DEATH
+          STAR, an armored space
+          station with enough power
+          to destroy an entire planet.
+          
+          Pursued by the Empire's
+          sinister agents, Princess
+          Leia races home aboard her
+          starship, custodian of the
+          stolen plans that can save her
+          people and restore
+          freedom to the galaxy....
+          <br />
+          <br />
+          A New Hope
+          <br />
+          <br />
+          1977-05-25
+</p>,
+        "className": "ticker-wrap",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....",
+            <br />,
+            <br />,
+            "A New Hope",
+            <br />,
+            <br />,
+            "1977-05-25",
+          ],
+          "className": "ticker",
+        },
+        "ref": null,
+        "rendered": Array [
+          "It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "A New Hope",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          "1977-05-25",
+        ],
+        "type": "p",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="ticker-wrap"
+>
+          <p
+                    className="ticker"
+          >
+                    It is a period of civil war.
+                    Rebel spaceships, striking
+                    from a hidden base, have won
+                    their first victory against
+                    the evil Galactic Empire.
+                    
+                    During the battle, Rebel
+                    spies managed to steal secret
+                    plans to the Empire's
+                    ultimate weapon, the DEATH
+                    STAR, an armored space
+                    station with enough power
+                    to destroy an entire planet.
+                    
+                    Pursued by the Empire's
+                    sinister agents, Princess
+                    Leia races home aboard her
+                    starship, custodian of the
+                    stolen plans that can save her
+                    people and restore
+                    freedom to the galaxy....
+                    <br />
+                    <br />
+                    A New Hope
+                    <br />
+                    <br />
+                    1977-05-25
+          </p>
+</div>,
+        "className": "scroll-text",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="ticker"
+>
+            It is a period of civil war.
+            Rebel spaceships, striking
+            from a hidden base, have won
+            their first victory against
+            the evil Galactic Empire.
+            
+            During the battle, Rebel
+            spies managed to steal secret
+            plans to the Empire's
+            ultimate weapon, the DEATH
+            STAR, an armored space
+            station with enough power
+            to destroy an entire planet.
+            
+            Pursued by the Empire's
+            sinister agents, Princess
+            Leia races home aboard her
+            starship, custodian of the
+            stolen plans that can save her
+            people and restore
+            freedom to the galaxy....
+            <br />
+            <br />
+            A New Hope
+            <br />
+            <br />
+            1977-05-25
+</p>,
+          "className": "ticker-wrap",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....",
+              <br />,
+              <br />,
+              "A New Hope",
+              <br />,
+              <br />,
+              "1977-05-25",
+            ],
+            "className": "ticker",
+          },
+          "ref": null,
+          "rendered": Array [
+            "It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "A New Hope",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "1977-05-25",
+          ],
+          "type": "p",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
