@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
-import logo from '../assets/imp-logo.svg';
-import { Route } from 'react-router';
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -17,20 +15,20 @@ class App extends Component {
   componentDidMount() {
     const people = fetch('https://swapi.co/api/people/')
       .then(res => res.json())
-      .catch(error => console.log(error)
-    );
+      .catch(error => alert(error)
+      );
     const planets = fetch('https://swapi.co/api/planets/')
       .then(res => res.json())
-      .catch(error => console.log(error)
-    );
+      .catch(error => alert(error)
+      );
     const vehicles = fetch('https://swapi.co/api/vehicles/')
       .then(res => res.json())
-      .catch(error => console.log(error)
-    );
+      .catch(error => alert(error)
+      );
     const scroll = fetch('https://swapi.co/api/films/')
       .then(res => res.json())
-      .catch(error => console.log(error)
-    );
+      .catch(error => alert(error)
+      );
 
     return Promise.all([people, planets, vehicles, scroll]).then( res => {
       const peopleInfo = this.squashPeopleArrays(res[0].results);

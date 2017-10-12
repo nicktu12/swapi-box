@@ -22,7 +22,8 @@ class CardContainer extends Component {
 
   favoriteACard = (object) => {
     const { faves } = this.state;
-    const found = faves.findIndex(currentfave => currentfave.title === object.title);
+    const found = faves.findIndex(
+      currentfave => currentfave.title === object.title);
     found > -1 ? faves.splice(found, 1) : faves.push(object);
     this.setState({ faves });
   }
@@ -38,7 +39,8 @@ class CardContainer extends Component {
         line4={''}
         favoriteFunc={this.favoriteACard}
         className={
-          this.state.faves.find(fave => fave.title === person.name) ? 'favorite' : 'unfavorite'
+          this.state.faves.find(fave => fave.title === person.name) ?
+            'favorite' : 'unfavorite'
         }/>);
   }
 
@@ -59,7 +61,8 @@ class CardContainer extends Component {
               : 'Residents: none'}
             favoriteFunc={this.favoriteACard}
             className={
-              this.state.faves.find(fave => fave.title === planet.name) ? 'favorite' : 'unfavorite'
+              this.state.faves.find(fave => fave.title === planet.name) ?
+                'favorite' : 'unfavorite'
             }/>
         );
       })
@@ -79,7 +82,8 @@ class CardContainer extends Component {
             line4={''}
             favoriteFunc={this.favoriteACard}
             className={
-              this.state.faves.find(fave => fave.title === vehicle.name) ? 'favorite' : 'unfavorite'
+              this.state.faves.find(fave => fave.title === vehicle.name) ?
+                'favorite' : 'unfavorite'
             }/>
         );
       })
@@ -96,16 +100,19 @@ class CardContainer extends Component {
         line4={card.line4}
         favoriteFunc={this.favoriteACard}
         className={
-          this.state.faves.find(fave => fave.title === card.title) ? 'favorite' : 'unfavorite'
+          this.state.faves.find(fave => fave.title === card.title) ?
+            'favorite' : 'unfavorite'
         }/>);
-      return (this.state.faves.length ?  favoriteCards : <div>There are no favorites.</div>);
+    return (this.state.faves.length ?
+      favoriteCards : <div>There are no favorites.</div>);
   }
 
   renderButtons() {
     return this.props.buttonTitles.map((title)=>(
       <Button
         key={Math.random()}
-        title={(title !== 'Favorites') ? title : `Favorites ${this.state.faves.length}`}
+        title={(title !== 'Favorites') ?
+          title : `Favorites ${this.state.faves.length}`}
         category={title}
         changeCategory={this.changeCategory}
         stateCategory={this.state.category}
@@ -119,11 +126,11 @@ class CardContainer extends Component {
         <Scroll scrollData={this.props.scrollData}/>
         <aside className="button-cont">
           <p>
-            Choose a category above and click on a card to add to your favorites!
+            Choose a category above and
+            click on a card to add to your favorites!
           </p>
           {this.renderButtons()}
         </aside>
-        {/* {this.renderCards()} */}
         <div className="card-wrapper">
           <Route exact path="/People"
             render={ () => this.renderPeople(this.props.dataForCards[0])}
