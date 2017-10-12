@@ -3,6 +3,8 @@ import Card from '../Card/Card';
 import Scroll from '../Scroll/Scroll';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+import { Route } from 'react-router';
+
 
 class CardContainer extends Component {
   constructor() {
@@ -96,28 +98,6 @@ class CardContainer extends Component {
       return (this.state.faves.length ?  favoriteCards : <div>There are no favorites.</div>);
   }
 
-  renderCards = () => {
-    if (this.state.category) {
-      console.log('cat', this.state.category)
-      const dataForCards = this.props.dataForCards;
-      switch (this.state.category) {
-      case 'People':
-        return this.renderPeople(dataForCards[0]);
-      case 'Planets':
-        return this.renderPlanets(dataForCards[1]);
-      case 'Vehicles':
-        return this.renderVehicles(dataForCards[2]);
-      case 'Favorites':
-        return this.renderFavorites(this.state.faves);
-      default:
-        return (
-          <div></div>
-        );
-      }
-
-    }
-  }
-
   renderButtons() {
     return this.props.buttonTitles.map((title)=>(
       <Button
@@ -135,7 +115,19 @@ class CardContainer extends Component {
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
         {this.renderButtons()}
-        {this.renderCards()}
+        {/* {this.renderCards()} */}
+        <Route exact path='/People'
+          render={ () => this.renderPeople(this.props.dataForCards[0])}
+        />
+        <Route exact path='/Planets'
+          render={ () => this.renderPlanets(this.props.dataForCards[1])}
+        />
+        <Route exact path='/Vehicles'
+          render={ () => this.renderVehicles(this.props.dataForCards[2])}
+        />
+        <Route exact path='/Favorites'
+          render={ () => this.renderFavorites(this.state.faves)}
+        />
       </div>
     );
   }

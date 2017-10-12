@@ -8,17 +8,19 @@ const Scroll = ( {scrollData} ) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
+  const ranNum = ranNumGen(0, scrollData.length - 1);
+
   return (
     <div className="scroll-text">
       <div className="scroll-cont">
         <p className="scroll-p">
-          {scrollData[ranNumGen(0, 6)].opening_crawl}
+          {scrollData[ranNum].opening_crawl}
           <br/>
           <br/>
-          {scrollData[ranNumGen(0, 6)].title}
+          {scrollData[ranNum].title}
           <br/>
           <br/>
-          {scrollData[ranNumGen(0, 6)].release_date}
+          {scrollData[ranNum].release_date}
         </p>
       </div>
     </div>
