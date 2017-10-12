@@ -98,28 +98,6 @@ class CardContainer extends Component {
       return (this.state.faves.length ?  favoriteCards : <div>There are no favorites.</div>);
   }
 
-  renderCards = () => {
-    if (this.state.category) {
-      console.log('cat', this.state.category)
-      const dataForCards = this.props.dataForCards;
-      switch (this.state.category) {
-      case 'People':
-        return this.renderPeople(dataForCards[0]);
-      case 'Planets':
-        return this.renderPlanets(dataForCards[1]);
-      case 'Vehicles':
-        return this.renderVehicles(dataForCards[2]);
-      case 'Favorites':
-        return this.renderFavorites(this.state.faves);
-      default:
-        return (
-          <div></div>
-        );
-      }
-
-    }
-  }
-
   renderButtons() {
     return this.props.buttonTitles.map((title)=>(
       <Button
