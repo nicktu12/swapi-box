@@ -118,10 +118,10 @@ class CardContainer extends Component {
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
         <aside className="button-cont">
-          {this.renderButtons()}
           <p>
             Choose a category above and click on a card to add to your favorites!
           </p>
+          {this.renderButtons()}
         </aside>
         {/* {this.renderCards()} */}
         <div className="card-wrapper">

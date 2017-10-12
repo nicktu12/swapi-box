@@ -1,9 +1,32 @@
 .button-container {
   display: block;
+  box-sizing: border-box;
+  margin: 10px 0 10px 0;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 250ms ease-in;
+  transform: scale(1);
+}
+
+.button-container:hover {
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 250ms ease-in;
+  transform: scale(1.4);
 }
 
 .button-active {
-  border: 3px solid rgba(254, 218, 74, 1);
+  transform: scale(1.4);
 }
 
 a {
@@ -12,4 +35,6 @@ a {
 
 .button-cont p {
   color: rgba(254, 218, 74, 1);
+  padding: 15px;
+  border: 3px solid rgba(254, 218, 74, 1);
 }
