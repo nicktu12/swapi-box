@@ -30,6 +30,7 @@ class CardContainer extends Component {
   renderPeople(people) {
     return people.map(person =>
       <Card key={Math.random()}
+        category='People'
         title={person.name}
         line1={`Homeworld: ${person.homeworld}`}
         line2={`Homeworld Population: ${person.population}`}
@@ -49,6 +50,7 @@ class CardContainer extends Component {
         }).join(', ');
         return (
           <Card key={Math.random()}
+            category='Planets'
             title={planet.name}
             line1={`Terrain: ${planet.terrain}`}
             line2={`Population: ${planet.population}`}
@@ -69,6 +71,7 @@ class CardContainer extends Component {
       vehicles.map(vehicle => {
         return (
           <Card key={Math.random()}
+            category='Vehicles'
             title={vehicle.name}
             line1={`Model: ${vehicle.model}`}
             line2={`Class: ${vehicle.vehicle_class}`}
@@ -114,20 +117,27 @@ class CardContainer extends Component {
     return (
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
-        {this.renderButtons()}
+        <aside className="button-cont">
+          <p>
+            Choose a category above and click on a card to add to your favorites!
+          </p>
+          {this.renderButtons()}
+        </aside>
         {/* {this.renderCards()} */}
-        <Route exact path='/People'
-          render={ () => this.renderPeople(this.props.dataForCards[0])}
-        />
-        <Route exact path='/Planets'
-          render={ () => this.renderPlanets(this.props.dataForCards[1])}
-        />
-        <Route exact path='/Vehicles'
-          render={ () => this.renderVehicles(this.props.dataForCards[2])}
-        />
-        <Route exact path='/Favorites'
-          render={ () => this.renderFavorites(this.state.faves)}
-        />
+        <div className="card-wrapper">
+          <Route exact path="/People"
+            render={ () => this.renderPeople(this.props.dataForCards[0])}
+          />
+          <Route exact path="/Planets"
+            render={ () => this.renderPlanets(this.props.dataForCards[1])}
+          />
+          <Route exact path="/Vehicles"
+            render={ () => this.renderVehicles(this.props.dataForCards[2])}
+          />
+          <Route exact path="/Favorites"
+            render={ () => this.renderFavorites(this.state.faves)}
+          />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,70 @@
+.card {
+  background-color: rgba(85, 140, 140, .5);
+  width: 20%;
+  margin: 25px;
+  position: relative;
+  text-align: left;
+  border-radius: 5px;
+  color: rgba(219, 219, 219, .85);
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+
+.card:hover {
+  background-color: rgba(85, 140, 140, 1);
+  color: rgba(0, 0, 0, 1);
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.unfavorite img {
+  width: 30px;
+  padding: 4.5px;
+}
+
+.favorite img {
+  width: 40px;
+}
+
+.favorite {
+  transform: scale(1.1);
+  background-color: rgba(85, 140, 140, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.card-cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  font-size: .7em;
+}
+
+h3 {
+  font-size: 1.4em;
+  padding-top: 25px;
+  margin-left: 5px;
+}
+
+p {
+  margin-left: 5px;
+}

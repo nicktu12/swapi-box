@@ -2,17 +2,19 @@
 @import '../CardContainer/CardContainer.scss';
 @import '../Scroll/Scroll.scss';
 @import '../Loader/Loader.scss';
+@import '../Card/Card.scss';
+
+@font-face {
+    font-family: starWarsFont;
+    src: url('../assets/Starjout.ttf');
+}
 
 .App {
   text-align: center;
-  background-color: pink;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-.icon {
-  fill: pink;
+  background-image: url('../assets/star-bg.jpg');
 }
 
 .App-logo {
@@ -21,14 +23,17 @@
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 7em;
+  font-family: starWarsFont;
+  font-weight: lighter;
+  margin: -25px;
+  color: rgba(254, 218, 74, 1);
 }
 
 .App-intro {

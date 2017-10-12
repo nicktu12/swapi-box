@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import faveIcon from '../assets/favorite.png';
 import notFaveIcon from '../assets/not-favorite.png';
 
-const Card = ({ title, line1, line2, line3, line4, favoriteFunc, className }) => {
+const Card = ({ title, line1, line2, line3, line4, favoriteFunc, className, category }) => {
   const icon = (className === 'favorite') ? faveIcon : notFaveIcon;
   return (
     <div className={`card ${className}`}
       onClick={() => { favoriteFunc({ title, line1, line2, line3, line4 }); }}>
       <article>
         <img src={icon} alt='Text indicating if fave' />
+        <p className='card-cat'>{category}</p>
         <h3>{title}</h3>
         <p>{line1}</p>
         <p>{line2}</p>
