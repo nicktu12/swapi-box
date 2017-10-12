@@ -30,6 +30,9 @@ ShallowWrapper {
                 alt="Text indicating if fave"
                 src="favorite.png"
         />
+        <p
+                className="card-cat"
+        />
         <h3>
                 Leia Organa
         </h3>
@@ -57,6 +60,9 @@ ShallowWrapper {
           <img
             alt="Text indicating if fave"
             src="favorite.png"
+/>,
+          <p
+            className="card-cat"
 />,
           <h3>
             Leia Organa
@@ -86,6 +92,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "card-cat",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
         },
         Object {
           "instance": null,
@@ -158,6 +176,9 @@ ShallowWrapper {
                     alt="Text indicating if fave"
                     src="favorite.png"
           />
+          <p
+                    className="card-cat"
+          />
           <h3>
                     Leia Organa
           </h3>
@@ -185,6 +206,9 @@ ShallowWrapper {
             <img
               alt="Text indicating if fave"
               src="favorite.png"
+/>,
+            <p
+              className="card-cat"
 />,
             <h3>
               Leia Organa
@@ -214,6 +238,18 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "card-cat",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
           },
           Object {
             "instance": null,

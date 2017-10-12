@@ -18,19 +18,19 @@ class App extends Component {
     const people = fetch('https://swapi.co/api/people/')
       .then(res => res.json())
       .catch(error => alert(error)
-    );
+      );
     const planets = fetch('https://swapi.co/api/planets/')
       .then(res => res.json())
       .catch(error => alert(error)
-    );
+      );
     const vehicles = fetch('https://swapi.co/api/vehicles/')
       .then(res => res.json())
       .catch(error => alert(error)
-    );
+      );
     const scroll = fetch('https://swapi.co/api/films/')
       .then(res => res.json())
       .catch(error => alert(error)
-    );
+      );
 
     return Promise.all([people, planets, vehicles, scroll]).then( res => {
       const peopleInfo = this.squashPeopleArrays(res[0].results);
