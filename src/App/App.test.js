@@ -23,7 +23,7 @@ describe('App', ()=>{
     expect(wrapper.state().dataSet.length).toEqual(0);
   });
 
-  it.only('should render only a loader component when state is empty', ()=>{
+  it('should render only a loader component when state is empty', ()=>{
     const wrapper = shallow(<App />);
 
     expect(wrapper.find('main').children().length).toEqual(1);
