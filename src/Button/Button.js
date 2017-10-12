@@ -18,7 +18,8 @@ const Button = ({ title, changeCategory, stateCategory, category }) => {
 Button.propTypes = {
   title: PropTypes.string,
   changeCategory: PropTypes.func,
-  stateCategory: PropTypes.string
+  stateCategory: PropTypes.string,
+  category: PropTypes.string
 };
 
 export default Button;

@@ -12,8 +12,8 @@ const Scroll = ( {scrollData} ) => {
 
   return (
     <div className="scroll-text">
-      <div className="scroll-cont">
-        <p className="scroll-p">
+      <div className="ticker-wrap">
+        <p className="ticker">
           {scrollData[ranNum].opening_crawl}
           <br/>
           <br/>

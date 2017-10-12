@@ -1,10 +1,14 @@
 @import '../Button/Button.scss';
 @import '../CardContainer/CardContainer.scss';
 @import '../Scroll/Scroll.scss';
+@import '../Loader/Loader.scss';
 
 .App {
   text-align: center;
   background-color: pink;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .icon {
