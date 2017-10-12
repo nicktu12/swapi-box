@@ -23,7 +23,6 @@ describe('Card', () => {
   it('should render img according to className', () => {
     let favorite = wrapper.find('.favorite');
     let img = wrapper.find('img');
-    // const src = img.find('src')
 
     expect(favorite.length).toEqual(1);
     expect(img.html()).toContain('favorite.png');
@@ -59,8 +58,8 @@ describe('Card', () => {
     const third = wrapper.findWhere(lines => lines.text() === 'Species: Human');
 
 
-    expect(lines.length).toEqual(4);
-    expect(first.text()).toEqual('Homeworld: Alderaan');
+    expect(lines.length).toEqual(5);
+    expect(first.text()).toEqual('');
     expect(last.text()).toEqual('');
     expect(second).toBeDefined();
     expect(third).toBeDefined();

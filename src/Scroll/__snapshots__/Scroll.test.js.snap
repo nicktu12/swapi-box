@@ -10,27 +10,7 @@ ShallowWrapper {
             Object {
               "director": "George Lucas",
               "episode_id": 4,
-              "opening_crawl": "It is a period of civil war.
-        Rebel spaceships, striking
-        from a hidden base, have won
-        their first victory against
-        the evil Galactic Empire.
-        
-        During the battle, Rebel
-        spies managed to steal secret
-        plans to the Empire's
-        ultimate weapon, the DEATH
-        STAR, an armored space
-        station with enough power
-        to destroy an entire planet.
-        
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plans that can save her
-        people and restore
-        freedom to the galaxy....",
+              "opening_crawl": "It is a period of civil war.",
               "producer": "Gary Kurtz, Rick McCallum",
               "release_date": "1977-05-25",
               "title": "A New Hope",
@@ -57,26 +37,6 @@ ShallowWrapper {
                 className="ticker"
         >
                 It is a period of civil war.
-                Rebel spaceships, striking
-                from a hidden base, have won
-                their first victory against
-                the evil Galactic Empire.
-                
-                During the battle, Rebel
-                spies managed to steal secret
-                plans to the Empire's
-                ultimate weapon, the DEATH
-                STAR, an armored space
-                station with enough power
-                to destroy an entire planet.
-                
-                Pursued by the Empire's
-                sinister agents, Princess
-                Leia races home aboard her
-                starship, custodian of the
-                stolen plans that can save her
-                people and restore
-                freedom to the galaxy....
                 <br />
                 <br />
                 A New Hope
@@ -97,26 +57,6 @@ ShallowWrapper {
           className="ticker"
 >
           It is a period of civil war.
-          Rebel spaceships, striking
-          from a hidden base, have won
-          their first victory against
-          the evil Galactic Empire.
-          
-          During the battle, Rebel
-          spies managed to steal secret
-          plans to the Empire's
-          ultimate weapon, the DEATH
-          STAR, an armored space
-          station with enough power
-          to destroy an entire planet.
-          
-          Pursued by the Empire's
-          sinister agents, Princess
-          Leia races home aboard her
-          starship, custodian of the
-          stolen plans that can save her
-          people and restore
-          freedom to the galaxy....
           <br />
           <br />
           A New Hope
@@ -133,27 +73,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "It is a period of civil war.
-Rebel spaceships, striking
-from a hidden base, have won
-their first victory against
-the evil Galactic Empire.
-
-During the battle, Rebel
-spies managed to steal secret
-plans to the Empire's
-ultimate weapon, the DEATH
-STAR, an armored space
-station with enough power
-to destroy an entire planet.
-
-Pursued by the Empire's
-sinister agents, Princess
-Leia races home aboard her
-starship, custodian of the
-stolen plans that can save her
-people and restore
-freedom to the galaxy....",
+            "It is a period of civil war.",
             <br />,
             <br />,
             "A New Hope",
@@ -165,27 +85,7 @@ freedom to the galaxy....",
         },
         "ref": null,
         "rendered": Array [
-          "It is a period of civil war.
-Rebel spaceships, striking
-from a hidden base, have won
-their first victory against
-the evil Galactic Empire.
-
-During the battle, Rebel
-spies managed to steal secret
-plans to the Empire's
-ultimate weapon, the DEATH
-STAR, an armored space
-station with enough power
-to destroy an entire planet.
-
-Pursued by the Empire's
-sinister agents, Princess
-Leia races home aboard her
-starship, custodian of the
-stolen plans that can save her
-people and restore
-freedom to the galaxy....",
+          "It is a period of civil war.",
           Object {
             "instance": null,
             "key": null,
@@ -244,26 +144,6 @@ freedom to the galaxy....",
                     className="ticker"
           >
                     It is a period of civil war.
-                    Rebel spaceships, striking
-                    from a hidden base, have won
-                    their first victory against
-                    the evil Galactic Empire.
-                    
-                    During the battle, Rebel
-                    spies managed to steal secret
-                    plans to the Empire's
-                    ultimate weapon, the DEATH
-                    STAR, an armored space
-                    station with enough power
-                    to destroy an entire planet.
-                    
-                    Pursued by the Empire's
-                    sinister agents, Princess
-                    Leia races home aboard her
-                    starship, custodian of the
-                    stolen plans that can save her
-                    people and restore
-                    freedom to the galaxy....
                     <br />
                     <br />
                     A New Hope
@@ -284,26 +164,6 @@ freedom to the galaxy....",
             className="ticker"
 >
             It is a period of civil war.
-            Rebel spaceships, striking
-            from a hidden base, have won
-            their first victory against
-            the evil Galactic Empire.
-            
-            During the battle, Rebel
-            spies managed to steal secret
-            plans to the Empire's
-            ultimate weapon, the DEATH
-            STAR, an armored space
-            station with enough power
-            to destroy an entire planet.
-            
-            Pursued by the Empire's
-            sinister agents, Princess
-            Leia races home aboard her
-            starship, custodian of the
-            stolen plans that can save her
-            people and restore
-            freedom to the galaxy....
             <br />
             <br />
             A New Hope
@@ -320,27 +180,7 @@ freedom to the galaxy....",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "It is a period of civil war.
-Rebel spaceships, striking
-from a hidden base, have won
-their first victory against
-the evil Galactic Empire.
-
-During the battle, Rebel
-spies managed to steal secret
-plans to the Empire's
-ultimate weapon, the DEATH
-STAR, an armored space
-station with enough power
-to destroy an entire planet.
-
-Pursued by the Empire's
-sinister agents, Princess
-Leia races home aboard her
-starship, custodian of the
-stolen plans that can save her
-people and restore
-freedom to the galaxy....",
+              "It is a period of civil war.",
               <br />,
               <br />,
               "A New Hope",
@@ -352,27 +192,7 @@ freedom to the galaxy....",
           },
           "ref": null,
           "rendered": Array [
-            "It is a period of civil war.
-Rebel spaceships, striking
-from a hidden base, have won
-their first victory against
-the evil Galactic Empire.
-
-During the battle, Rebel
-spies managed to steal secret
-plans to the Empire's
-ultimate weapon, the DEATH
-STAR, an armored space
-station with enough power
-to destroy an entire planet.
-
-Pursued by the Empire's
-sinister agents, Princess
-Leia races home aboard her
-starship, custodian of the
-stolen plans that can save her
-people and restore
-freedom to the galaxy....",
+            "It is a period of civil war.",
             Object {
               "instance": null,
               "key": null,
