@@ -3,7 +3,7 @@ import Loader from '../Loader/Loader';
 import CardContainer from '../CardContainer/CardContainer';
 import logo from '../assets/imp-logo.svg';
 import { Route } from 'react-router';
-import './App.css';
+// import './App.css';
 
 class App extends Component {
   constructor() {

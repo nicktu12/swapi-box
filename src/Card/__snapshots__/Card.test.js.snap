@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    className="favorite"
+    favoriteFunc={[Function]}
+    line1="Homeworld: Alderaan"
+    line2="Homeworld Population: 2000000000"
+    line3="Species: Human"
+    line4=""
+    title="Leia Organa"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": <article>
+        <img
+                alt="Text indicating if fave"
+                src="favorite.png"
+        />
+        <h3>
+                Leia Organa
+        </h3>
+        <p>
+                Homeworld: Alderaan
+        </p>
+        <p>
+                Homeworld Population: 2000000000
+        </p>
+        <p>
+                Species: Human
+        </p>
+        <p />
+</article>,
+      "className": "card favorite",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="Text indicating if fave"
+            src="favorite.png"
+/>,
+          <h3>
+            Leia Organa
+</h3>,
+          <p>
+            Homeworld: Alderaan
+</p>,
+          <p>
+            Homeworld Population: 2000000000
+</p>,
+          <p>
+            Species: Human
+</p>,
+          <p />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Text indicating if fave",
+            "src": "favorite.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Leia Organa",
+          },
+          "ref": null,
+          "rendered": "Leia Organa",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Homeworld: Alderaan",
+          },
+          "ref": null,
+          "rendered": "Homeworld: Alderaan",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Homeworld Population: 2000000000",
+          },
+          "ref": null,
+          "rendered": "Homeworld Population: 2000000000",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Species: Human",
+          },
+          "ref": null,
+          "rendered": "Species: Human",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "p",
+        },
+      ],
+      "type": "article",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <article>
+          <img
+                    alt="Text indicating if fave"
+                    src="favorite.png"
+          />
+          <h3>
+                    Leia Organa
+          </h3>
+          <p>
+                    Homeworld: Alderaan
+          </p>
+          <p>
+                    Homeworld Population: 2000000000
+          </p>
+          <p>
+                    Species: Human
+          </p>
+          <p />
+</article>,
+        "className": "card favorite",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Text indicating if fave"
+              src="favorite.png"
+/>,
+            <h3>
+              Leia Organa
+</h3>,
+            <p>
+              Homeworld: Alderaan
+</p>,
+            <p>
+              Homeworld Population: 2000000000
+</p>,
+            <p>
+              Species: Human
+</p>,
+            <p />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Text indicating if fave",
+              "src": "favorite.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Leia Organa",
+            },
+            "ref": null,
+            "rendered": "Leia Organa",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Homeworld: Alderaan",
+            },
+            "ref": null,
+            "rendered": "Homeworld: Alderaan",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Homeworld Population: 2000000000",
+            },
+            "ref": null,
+            "rendered": "Homeworld Population: 2000000000",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Species: Human",
+            },
+            "ref": null,
+            "rendered": "Species: Human",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "p",
+          },
+        ],
+        "type": "article",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
