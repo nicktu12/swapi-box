@@ -141,10 +141,13 @@ class CardContainer extends Component {
           render={ () => this.renderPeople(this.props.dataForCards[0])}
         />
         <Route exact path='/Planets'
-          render={ () => this.renderPeople(this.props.dataForCards[1])}
+          render={ () => this.renderPlanets(this.props.dataForCards[1])}
         />
         <Route exact path='/Vehicles'
-          render={ () => this.renderPeople(this.props.dataForCards[2])}
+          render={ () => this.renderVehicles(this.props.dataForCards[2])}
+        />
+        <Route path='/Favorites'
+          render={ () => this.renderFavorites(this.state.faves)}
         />
       </div>
     );

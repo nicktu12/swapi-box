@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Button = ({ title, changeCategory, stateCategory, category }) => {
@@ -9,7 +10,7 @@ const Button = ({ title, changeCategory, stateCategory, category }) => {
         : "button-container"
     }
     onClick={() => { changeCategory(category); }}>
-      <a href={title}>{title}</a>
+      <Link to={title}>{title}</Link>
     </div>
   );
 };
