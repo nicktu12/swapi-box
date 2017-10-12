@@ -82,21 +82,18 @@ class CardContainer extends Component {
   }
 
   renderFavorites(array) {
-    console.log('faves')
-    return (
-      array.map(card =>
-        <Card key={Math.random()}
-          title={card.title}
-          line1={card.line1}
-          line2={card.line2}
-          line3={card.line3}
-          line4={card.line4}
-          favoriteFunc={this.favoriteACard}
-          className={
-            this.state.faves.find(fave => fave.title === card.title) ? 'favorite' : 'unfavorite'
-          }/>
-      )
-    );
+    let favoriteCards = array.map(card =>
+      <Card key={Math.random()}
+        title={card.title}
+        line1={card.line1}
+        line2={card.line2}
+        line3={card.line3}
+        line4={card.line4}
+        favoriteFunc={this.favoriteACard}
+        className={
+          this.state.faves.find(fave => fave.title === card.title) ? 'favorite' : 'unfavorite'
+        }/>);
+      return (this.state.faves.length ?  favoriteCards : <div>There are no favorites.</div>);
   }
 
   renderCards = () => {
