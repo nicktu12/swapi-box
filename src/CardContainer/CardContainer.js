@@ -114,18 +114,23 @@ class CardContainer extends Component {
     return (
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
-        {this.renderButtons()}
+        <div className="button-cont">
+          {this.renderButtons()}
+          <p>
+            Choose a category above and click on a card to add to your favorites! 
+          </p>
+        </div>
         {/* {this.renderCards()} */}
-        <Route exact path='/People'
+        <Route exact path="/People"
           render={ () => this.renderPeople(this.props.dataForCards[0])}
         />
-        <Route exact path='/Planets'
+        <Route exact path="/Planets"
           render={ () => this.renderPlanets(this.props.dataForCards[1])}
         />
-        <Route exact path='/Vehicles'
+        <Route exact path="/Vehicles"
           render={ () => this.renderVehicles(this.props.dataForCards[2])}
         />
-        <Route exact path='/Favorites'
+        <Route exact path="/Favorites"
           render={ () => this.renderFavorites(this.state.faves)}
         />
       </div>

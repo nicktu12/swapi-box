@@ -1,3 +1,14 @@
 .card-container {
-  // display: flex;
+  position: relative;
+}
+
+.button-cont {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  overflow: auto;
+  width: 200px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
 }
