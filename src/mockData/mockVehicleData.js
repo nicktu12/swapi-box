@@ -1,4 +1,4 @@
-export default mockVehicleData = [
+const mockVehicleData = [
   {
     "name": "Sand Crawler",
     "model": "Digger Crawler",
@@ -60,3 +60,5 @@ export default mockVehicleData = [
     "edited": "2014-12-22T18:21:15.583700Z",
     "url": "https://swapi.co/api/vehicles/7/"
   }];
+
+export default mockVehicleData;
