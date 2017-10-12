@@ -9,9 +9,7 @@ const Button = ({ title, changeCategory, stateCategory, category }) => {
         : "button-container"
     }
     onClick={() => { changeCategory(category); }}>
-      <button>
-        {title}
-      </button>
+      <a href={title}>{title}</a>
     </div>
   );
 };

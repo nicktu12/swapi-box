@@ -137,7 +137,15 @@ class CardContainer extends Component {
       <div className="card-container">
         <Scroll scrollData={this.props.scrollData}/>
         {this.renderButtons()}
-        {this.renderCards()}
+        <Route exact path='/People'
+          render={ () => this.renderPeople(this.props.dataForCards[0])}
+        />
+        <Route exact path='/Planets'
+          render={ () => this.renderPeople(this.props.dataForCards[1])}
+        />
+        <Route exact path='/Vehicles'
+          render={ () => this.renderPeople(this.props.dataForCards[2])}
+        />
       </div>
     );
   }
