@@ -1,4 +1,4 @@
-# Project Title
+# SWAPIbox
 
 This project focuses on displaying data from the Star Wars api using nested API calls, and is build with React utilizing reusable, modular components. 
 
