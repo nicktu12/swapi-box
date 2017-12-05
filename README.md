@@ -2,6 +2,8 @@
 
 This project focuses on displaying data from the Star Wars api using nested API calls, and is build with React utilizing reusable, modular components. 
 
+![swapi](https://user-images.githubusercontent.com/26471447/33588537-9a940f92-d930-11e7-8baf-8ffc4763363f.gif)
+
 ## Getting Started
 
 Install npm on your local machine and obtain an API key from the Star Wars API. Clone down this repository to get started. 
